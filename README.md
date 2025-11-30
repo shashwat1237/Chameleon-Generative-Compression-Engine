@@ -21,7 +21,7 @@ CHAMELEON implements modern **LLM-based text compression** using:
 - Binary-safe `.bin` output  
 - Full decompression reversibility  
 
-### 🔥 Features
+## 🔥 Features
 - True generative compression — NOT gzip or heuristic compression  
 - Preserves exact original text after decompression  
 - Uses GPT-2’s predicted token distributions to guide the arithmetic coder  
@@ -66,7 +66,7 @@ https://pytorch.org/get-started/locally/
 
 ## 🚀 Running Locally
 
-### 1. Create virtual environment
+## 1. Create virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate     # macOS/Linux
