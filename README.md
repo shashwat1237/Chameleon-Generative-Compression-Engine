@@ -2,7 +2,7 @@
 
 This repository contains two main Streamlit applications:
 
-- **`gpt_file3.py`** — CHAMELEON Generative Compression Engine  
+- **`compressor_decompressor.py`** — CHAMELEON Generative Compression Engine  
 - **`FILE_COMPARATOR.py`** — File & Text Comparator Tool  
 
 These are the *only* files in the project and together form a complete suite:
@@ -50,5 +50,89 @@ Useful for verifying:
 
 ## 📦 Requirements
 
-Put this into `requirements.txt`:
+streamlit
+torch
+transformers
+pdfplumber
+chardet
 
+
+
+## Optional GPU acceleration:  
+Install PyTorch GPU version according to your system at  
+https://pytorch.org/get-started/locally/
+
+---
+
+## 🚀 Running Locally
+
+### 1. Create virtual environment
+```bash
+python -m venv venv
+source venv/bin/activate     # macOS/Linux
+venv\Scripts\activate   
+
+## 2. Install dependencies
+pip install -r requirements.txt
+
+3. Run one of the apps
+
+##Start CHAMELEON Compressor
+
+streamlit run compressor_decompressor.py
+
+
+## Start File Comparator
+
+streamlit run FILE_COMPARATOR.py
+
+🧪 Testing
+Test compression + decompression
+
+Run CHAMELEON
+
+Enter/paste text → compress → download .bin
+
+Re-upload .bin → decompress
+
+Paste both results into the comparator → should get 100% identical
+
+Test comparator
+
+Paste different text on both sides
+
+Upload files of different formats
+
+Compare PDF vs text extracted from it
+
+⚠️<b> Important Notes</b>
+
+CHAMELEON compression is slow on CPU — GPU recommended
+
+Must use same GPT-2 model version to decompress
+
+Arithmetic coder is deterministic but sensitive to model drift
+
+Comparator will fallback gracefully when file encodings vary
+
+🔧 <b>Recommended Enhancements</b>
+
+Add GPU-aware batching for faster compression
+
+Add support for larger LLMs (LLaMA-3 / Mistral)
+
+Add FastAPI backend for API-based compression
+
+Add file diff highlighting in comparator
+
+🙌<b> Credits</b>
+
+This project implements components inspired by LM-based neural compression research such as:
+
+Bellard’s ts_zip
+
+LMCompress papers
+
+GPT-2 entropy coding experiments
+
+And extends them with a polished Streamlit UI.
