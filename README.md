@@ -86,7 +86,7 @@ streamlit run compressor_decompressor.py
 
 streamlit run FILE_COMPARATOR.py
 
-🧪 Testing
+🧪## Testing
 Test compression + decompression
 
 Run CHAMELEON
@@ -105,7 +105,7 @@ Upload files of different formats
 
 Compare PDF vs text extracted from it
 
-⚠️<b> Important Notes</b>
+⚠️##Important Notes
 
 CHAMELEON compression is slow on CPU — GPU recommended
 
@@ -125,7 +125,7 @@ Add FastAPI backend for API-based compression
 
 Add file diff highlighting in comparator
 
-🙌<b> Credits</b>
+🙌##Credits
 
 This project implements components inspired by LM-based neural compression research such as:
 
